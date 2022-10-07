@@ -1,0 +1,409 @@
+body{
+  background-color: lightyellow;
+}
+/*  ANIMATION HEAD  */
+.headersection{
+  height:250px;
+  margin: 1% 4%;
+}
+.name{
+  margin-left: 6%;
+  margin-bottom: 0;
+}
+.logo{
+border: 3px solid DarkGoldenRod;
+border-radius: 30%;
+box-shadow: 5px 10px DarkGoldenRod;
+width:25%;
+height:90%;
+margin: 1%;
+float:left;
+animation: move 4s infinite;
+}
+
+.logo img{
+  width:100%;
+height:100%;
+border-radius: 30px;
+}
+@keyframes move {
+  0%{transform: scale(0)}
+  25%{transform: scale(0.5)}
+  50%{transform:scale(0.7); }
+  100%{transform:scale(0.9); }
+}
+.title{
+width:68%;
+height:40%;
+margin: 1%;
+float:left;
+animation: movebottom 2s infinite;
+}
+
+@keyframes movebottom{
+  0%{transform: translateY(0px);}
+  50%{transform: translateY(100px);}
+  100%{transform: translateY(0px);}
+}
+
+@keyframes movetop{
+  0%{transform: translateY(0px);}
+  50%{transform: translateY(-150px);}
+  100%{transform: translateY(0px);}
+}
+#covertitle{
+  margin: auto;
+  color: DarkGoldenRod;
+  font-family: cursive;
+  font-size: 40pt;
+}
+.subtitle{
+width:68%;
+height:30%;
+margin: 1%;
+float:left;
+animation: movetop 2s infinite;
+}
+
+
+
+/* SLIDE SHOW   */
+.slider{
+  margin-right: 4%;
+  margin-left: 4%;
+  box-sizing: border-box;
+  height:50px;
+  overflow: hidden; /* hidding the content before*/
+  text-align: center;
+}
+.sliderwrapper{
+  width:300%;
+  height:100%;
+  animation: slideshow 10s infinite;  /* animation applied */
+  /* margin-left: -10%; (TESTING) including postion for each slide moving to the left with -10 */
+}
+.slide{
+  width: 33.33%;
+  height: 100%;
+  margin-top: 0;
+  float: left;
+
+}
+@keyframes slideshow {
+  0%{margin-left: 0%}
+
+  55%{margin-left: -100%} /* -100 moving the entire slide to the next */
+
+
+  75%{margin-left: -200%}
+}
+
+
+.slide1{
+  background-color: GoldenRod;
+}
+
+.slide2{
+  background-color: Olive;
+}
+.slide3{
+  background-color: RosyBrown;
+}
+
+.span1{
+  font-weight: bolder;
+}
+.span2{
+  font-style: italic;
+  font-size: 8pt;
+}
+
+.span3{
+  color: white;
+}
+
+
+/* HERO IMAGE SECTION  */
+.heroImageBox{
+  margin-right:4%;
+  margin-left:4%;
+  height: 600px;
+  position: relative;
+}
+
+.heroImageBox img{
+  width: 100%;
+  height: 100%;
+}
+
+.messageBox{
+  width: 40%;
+  position: absolute;
+  top: 30%;
+  padding: 2%;
+  text-align: center;
+}
+
+.messageBox p{
+  padding: 4%;
+  border: 4px solid white;
+  background-color: gray;
+}
+
+/* 2 BY 1 SECTION */
+.parent{
+  padding: 2rem, 2rem;
+  margin: 5% 4% 5% 4%;
+  display: flex;
+  justify-content: space-around;
+  height: 400px;
+}
+
+
+#child{
+  background-image:linear-gradient(to bottom, rgba(245, 246, 252, 0.52), rgba(117, 19, 93, 0.73)),url('../Project2/Images/intro_img1.jpg');
+  background-size:  cover;
+  background-repeat: no-repeat;
+  text-align: center;
+  width:40%;
+  height: 100%;
+  position: relative;
+}
+#child p{
+  position: absolute;
+  left: 5%;
+  top: 20%;
+  padding: 5%;
+  border: 2px solid lightgreen;
+}
+
+#child2{
+  background-image: linear-gradient(to bottom, gray,lightgray, darkgray);
+  width:40%;
+  height: 100%;
+  display: inline-block;
+  vertical-align: middle;
+  color: darkgreen;
+}
+
+.greenString{
+  padding:5%;
+}
+
+/* MODAL WINDOW */
+
+.close{
+  background-color: lightgray;
+  position: absolute;
+  top: 2%;
+  right: 30px;
+  padding: 1%;
+}
+.close:hover{
+  background-color: lightgray;
+}
+
+.modBox{
+  background-color: rgba(224,224,224,0.8);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  /*display: none; */
+  opacity: 0;  /* to remove the modal from site(invisible to the audiance)*/
+  pointer-events: none; /* disable the cursive events*/
+}
+
+.modBox:target{ /* this is once button is clicked, this target will show*/
+  opacity: 1; /* this will now be visible to user */
+  pointer-events: auto;  /* close the modal window bc cursive is turned on*/
+
+
+}
+.modalMessage{
+  position: relative;
+  background-color: white;
+  width:400px;
+  height: 500px;
+  margin: auto;
+  /*text-align: center;*/
+  margin-top: 10%;
+  padding: 3%;
+}
+
+.modalMessage p{
+  margin-left: 2%;
+
+}
+.modImage{
+  height: 200px;
+  display: block;
+}
+
+.modImage img{
+  width:150px;
+  height:200px;
+  display: block;
+  float: left;
+}
+
+.modalMessage a {
+  text-decoration: none;
+  padding:1%;
+  background-color: white;
+}
+
+.modFoot{
+  margin: 5%;
+  background-color: lightgray;
+  padding: 2%;
+}
+
+.modFoot a{
+  margin-left: 2%;
+}
+
+/* PRODUCT ROW & GIFT SETS ROW */
+.productrow{
+  /*border: 2px solid;*/
+  text-align: center;
+  /*margin-top: 5%;*/
+  margin-right:5%;
+  margin-left:5%;
+  /*background-color:lightblue ;*/
+  height:550px;
+}
+
+.productbox{
+  /*border:2px solid red;*/
+  width:26%;
+  float:left;
+  margin: 3%;}
+
+.productbox img{ width: 90%; }
+
+.ritual{
+  color: DarkGoldenRod;
+}
+
+.bolder{
+  font-weight: bold;
+}
+
+.buttons{
+  text-decoration: none;
+  background-color: black;
+  border-radius: 10%;
+  padding: 2%;
+  color: white;
+}
+
+
+/*  FOOTER*/
+.foot{
+  position: relative;
+  text-align: center;
+  background-color: black;
+  margin-right:5%;
+  margin-left:5%;
+  margin-top: 5%;
+  height:400px;
+}
+
+.menu{
+  height: 20px;
+  /*  HORIZONTAL
+  border: 2px solid pink;
+  list-style-type: none; gets rid of the bullet point
+  width: 25%;
+  text-align: center;*/
+}
+
+.menu li{
+  display: inline;  /*VERTICAL, when using display, you also use float*/
+  width: 20%;
+  float: left;
+  margin-right: 3%;
+  /*   align elements in the same row*/
+}
+
+.menu li a{
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+  justify-content:
+  padding: 5px 3%;
+  /* HORIZONTAL
+  text-decoration: none;
+  display: inline-block;
+  height: 30px;
+  width:60%;
+  padding: 12px 20%;
+  */
+}
+.menu li a:hover{
+  background-color: GoldenRod;
+}
+
+.big{
+  font-size: 15pt;
+  font-weight: bold;
+  padding: 2%;
+}
+
+.media{
+  color: white;
+  float: right;
+  margin-right: 5%;
+
+}
+.mediaText{
+  font-weight: bold;
+}
+
+.medialogo{
+  height: 50px;
+  width: 100%;
+  display: inline-block;
+}
+
+.medialogo img{
+  width: 50px;
+  height: 100%;
+  display: flex;
+  float: right;
+  margin: 2%;
+}
+
+footer{
+  color: white;
+  position: absolute;
+  bottom: 0;
+  right:5%;
+  left:5%;
+}
+
+.line{
+  border: 1px solid white;
+  margin-left: 5%;
+  margin-right:5%;
+}
+.line2{
+  border: 1px solid black;
+  margin-left: 5%;
+  margin-right:5%;
+}
+
+.line3{
+  border: 2px solid darkgray;
+  margin-left: 2%;
+  margin-right:2%;
+}
+
+.line4{
+  border: 2px solid white;
+  margin-left: 2%;
+  margin-right:2%;
+
+}
